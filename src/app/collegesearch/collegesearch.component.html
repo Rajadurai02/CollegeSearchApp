@@ -1,0 +1,40 @@
+<div class="collge-search-container">
+  <h1>College Search Application</h1>
+<div class="form-container">
+  <div class="input-group col-sm-6">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Name</span>
+    </div>
+    <input [(ngModel)]="studentName" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter your Name">
+  </div>
+<div class="input-group col-sm-6">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">City</span>
+    </div>
+    <input [(ngModel)]="city" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter the City Name">
+  </div>
+</div>
+
+<app-collegelist [StudentName]="studentName" [CityName]="city" (ReturnColleges)='collegeList=$event'></app-collegelist>
+<table class="table" *ngIf="collegeList.length > 0; else elseBlock">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">College Code</th>
+        <th scope="col">College StudentName</th>
+        <th scope="col">City</th>
+        <th scope="col">Available Courses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let college of collegeList">
+        <td>{{college.Code}}</td>
+        <td>{{college.Name}}</td>
+        <td>{{college.City}}</td>
+        <td>{{college.Courses}}</td>
+      </tr>      
+    </tbody>
+  </table>
+  <ng-template #elseBlock><h2 class="no">No Colleges Found!</h2></ng-template>
+</div>
+  
+  

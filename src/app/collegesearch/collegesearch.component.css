@@ -1,0 +1,20 @@
+.collge-search-container{
+    width:100vw;
+    height:100vh;
+}
+.collge-search-container h1{
+    background-color: #fff;
+    padding:10px 20px;
+    text-align: center;
+    color:#1984cb;
+}
+.form-container{
+    display:flex;
+    height:100px;
+    align-items:center;
+    justify-content: center;
+}
+.no{
+    color:#fff;
+    margin: 10px 20px;
+}

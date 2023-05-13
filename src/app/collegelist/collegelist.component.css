@@ -1,0 +1,15 @@
+.college-list-container{
+    margin:10px 20px;
+}
+h3{
+    color:#fff;
+}
+
+button{
+    background-color: #fff;
+    color:#1984cb;
+    padding:10px 20px;
+    border-radius:30px;
+    border: 1px solid #fff;
+    margin-top:20px;
+}
